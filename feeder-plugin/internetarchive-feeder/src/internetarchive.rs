@@ -495,6 +495,7 @@ impl InternetArchivePlugin {
         let mut fields: BTreeMap<String, String> = BTreeMap::new();
         fields.insert("fileType".to_string(), "audio".to_string());
         fields.insert("contentKind".to_string(), "track".to_string());
+        fields.insert("domain".to_string(), "music".to_string());
         fields.insert("title".to_string(), track.title.clone());
         fields.insert("album".to_string(), item.title.clone());
         fields.insert("fileName".to_string(), track.file_name.clone());
@@ -590,6 +591,9 @@ impl InternetArchivePlugin {
         let mut fields: BTreeMap<String, String> = BTreeMap::new();
         fields.insert("fileType".to_string(), "audio".to_string());
         fields.insert("contentKind".to_string(), "pack".to_string());
+        // `pack` is domain-ambiguous by construction (season pack vs album
+        // release), so the writer supplies it — METADATA_KEYS.md §1.
+        fields.insert("domain".to_string(), "music".to_string());
         fields.insert("title".to_string(), item.title.clone());
         fields.insert("album".to_string(), item.title.clone());
         if !item.creator.trim().is_empty() {
