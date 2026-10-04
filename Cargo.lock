@@ -764,8 +764,8 @@ checksum = "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98"
 
 [[package]]
 name = "meta-feeder-sdk"
-version = "0.1.0"
-source = "git+https://github.com/worph/meta-feeder-sdk?tag=v1.1.0#4baf81e2bf87140175b1f51f6be51a84015e361a"
+version = "1.7.0"
+source = "git+https://github.com/worph/meta-feeder-sdk?tag=v1.7.0#027917c8cffe7ca43dadcf3b426cc5f69ecc443a"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -774,6 +774,7 @@ dependencies = [
  "bytes",
  "futures",
  "hyper",
+ "libc",
  "redb",
  "regex",
  "reqwest",

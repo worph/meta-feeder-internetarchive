@@ -28,7 +28,7 @@ path = "src/main.rs"
 # ("no matching package named `meta-feeder-sdk`"), because a consumer's checkout
 # has no such sibling directory either. A path dep here is not a local
 # convenience; it is a defect visible to every downstream repo.
-meta-feeder-sdk = { git = "https://github.com/worph/meta-feeder-sdk", tag = "v1.1.0" }
+meta-feeder-sdk = { git = "https://github.com/worph/meta-feeder-sdk", tag = "v1.7.0" }
 
 tokio = { version = "1.40", features = ["full"] }
 axum = { version = "0.7", features = ["json"] }
